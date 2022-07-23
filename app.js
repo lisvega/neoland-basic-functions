@@ -156,3 +156,45 @@ function finderName(list, text) {
     }
 }
 console.log(finderName(nameFinder, "Peggy"));
+
+
+
+/**Iteración #8: Contador de repeticiones --Crea una función que nos devuelva el número de veces 
+que se repite cada una de las palabras que lo conforma.  Puedes usar este array para probar tu función:
+*/
+
+const counterWords = [
+    'code',
+    'repeat',
+    'eat',
+    'sleep',
+    'code',
+    'enjoy',
+    'sleep',
+    'code',
+    'enjoy',
+    'upgrade',
+    'code'
+];
+function removeDuplicates2(list) {
+    let unicos2 = [];
+    let repeticiones = [];
+
+    list.forEach((element) => {
+        if (!unicos2.includes(element)) {
+            unicos2.push(element)
+        }
+    })
+    console.log(unicos2)
+    let contador = 0;
+    unicos2.forEach((repeticiones) => {
+        list.forEach((repeticionesDos) => {
+            if (repeticiones == repeticionesDos) {
+                contador++;
+            };
+        }); repeticiones.push(repeticiones + "  " + contador);
+
+    }); return repeticiones;
+}
+
+console.log(removeDuplicates2(counterWords))
